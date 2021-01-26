@@ -1,10 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 
-const NavBar = styled.div``;
+const NavBar = styled.div`
+  background-color: lightblue;
+`;
+const Logo = styled.div``;
+const Form = styled.form``;
 
 export default function Navbar() {
-  return <NavBar>blach blach</NavBar>;
-}
+  return (
+    <NavBar>
+      <Logo>
+        <img src="#" alt="logo-globe" />
+      </Logo>
 
-//key: f6c6deeaa5d14d9093099b927cea2961
+      <Form>
+        <input type="text" name="searchItem" defaultValue="searchItem" />
+      </Form>
+    </NavBar>
+  );
+}
