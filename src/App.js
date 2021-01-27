@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Body from "./Body/Body";
 import NavBar from "./NavBar/NavBar";
@@ -13,20 +13,26 @@ const Wrapper = styled.div`
   font-family: "Roboto", sans serif;
 `;
 export default function App() {
+  const [topic, setTopic] = useState("");
+  const [keyword, setKeyword] = useState("");
   const { get, isLoading } = useFetch(
     "https://api.nytimes.com/svc/topstories/v2/"
   );
 
   useEffect(() => {
-    get("home.json?api-key=M2MJ1tu97KN0b4aNn7xVudoO7owl2jgA")
+    get(`${topic}.json?api-key=M2MJ1tu97KN0b4aNn7xVudoO7owl2jgA`)
       .then((data) => console.log(data))
       .catch((error) => console.log(error));
-  }, []);
+  }, [topic]);
+
+  function handleTopicChange(e) {
+    setTopic(e.target.value);
+  }
 
   return (
     <Wrapper>
-      <NavBar />
-      <Body />
+      <NavBar onChange={handleTopicChange} />
+      {isLoading ? <p>""</p> : <Body />}
     </Wrapper>
   );
 }

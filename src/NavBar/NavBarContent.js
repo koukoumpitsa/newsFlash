@@ -16,7 +16,7 @@ const NavBarContentWrapper = styled.div`
   }
 `;
 
-export default function NavBarContent() {
+export default function NavBarContent(props) {
   return (
     <NavBarContentWrapper>
       <div className="navBar_content_title">
@@ -25,7 +25,7 @@ export default function NavBarContent() {
       <div className="navBar_content_subtitle">
         <p>Find the latest news from the New York Times.</p>
       </div>
-      <NavBarInput />
+      <NavBarInput onChange={props.onChange} />
     </NavBarContentWrapper>
   );
 }

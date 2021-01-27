@@ -15,7 +15,7 @@ export default function NavBar(props) {
   return (
     <NavBarWrapper>
       <NavBarLogo />
-      <NavBarContent />
+      <NavBarContent onChange={props.onChange} />
     </NavBarWrapper>
   );
 }
