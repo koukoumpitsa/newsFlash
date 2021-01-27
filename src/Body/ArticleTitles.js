@@ -15,11 +15,11 @@ const TitlesWrapper = styled.div`
     font-size: 1.5em;
   }
 `;
-export default function ArticleTitles() {
+export default function ArticleTitles(props) {
   return (
     <TitlesWrapper>
-      <p className="titles_main">Title of Article</p>
-      <p className="titles_abstract">Abstract</p>
+      <p className="titles_main">{props.title}</p>
+      <p className="titles_abstract">{props.abstract}</p>
     </TitlesWrapper>
   );
 }

@@ -9,10 +9,33 @@ const BodyWrapper = styled.div`
   grid-gap: 1.5em;
 `;
 
-export default function Body() {
+export default function Body(props) {
   return (
     <BodyWrapper>
-      <ArticleBox />
+      <ArticleBox
+        title={props.title}
+        abstract={props.abstract}
+        link={props.link}
+        keyword={props.keyword}
+      />
+      <ArticleBox
+        title={props.title}
+        abstract={props.abstract}
+        link={props.link}
+        keyword={props.keyword}
+      />
+      <ArticleBox
+        title={props.title}
+        abstract={props.abstract}
+        link={props.link}
+        keyword={props.keyword}
+      />
+      <ArticleBox
+        title={props.title}
+        abstract={props.abstract}
+        link={props.link}
+        keyword={props.keyword}
+      />
     </BodyWrapper>
   );
 }

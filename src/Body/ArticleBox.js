@@ -15,12 +15,12 @@ const ArticleBoxWrapper = styled.div`
   grid-template-rows: 10% 1fr 10%;
 `;
 
-export default function ArticleBox() {
+export default function ArticleBox(props) {
   return (
     <ArticleBoxWrapper>
-      <ArticleKeyword />
-      <ArticleTitles />
-      <ArticleLink />
+      <ArticleKeyword keyword={props.keyword} />
+      <ArticleTitles title={props.title} abstract={props.abstract} />
+      <ArticleLink link={props.link} />
     </ArticleBoxWrapper>
   );
 }

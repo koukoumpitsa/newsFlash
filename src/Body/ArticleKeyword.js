@@ -13,7 +13,7 @@ const KeywordWrapper = styled.div`
 export default function ArticleKeyword(props) {
   return (
     <KeywordWrapper>
-      <p className="keyword_text">Keyword</p>
+      <p className="keyword_text">{props.keyword}</p>
     </KeywordWrapper>
   );
 }

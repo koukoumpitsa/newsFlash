@@ -13,10 +13,15 @@ const LinkWrapper = styled.div`
     text-decoration: underline;
   }
 `;
-export default function ArticleLink() {
+export default function ArticleLink(props) {
   return (
     <LinkWrapper>
-      <a href="#" className="readMore_link">
+      <a
+        href={props.link}
+        className="readMore_link"
+        target="_blank"
+        rel="noreferrer"
+      >
         Read more
       </a>
     </LinkWrapper>

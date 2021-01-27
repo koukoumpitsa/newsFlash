@@ -13,15 +13,24 @@ const Wrapper = styled.div`
   font-family: "Roboto", sans serif;
 `;
 export default function App() {
-  const [topic, setTopic] = useState("");
+  const [title, setTitle] = useState("");
+  const [abstract, setAbstract] = useState("");
+  const [link, setLink] = useState("");
   const [keyword, setKeyword] = useState("");
+  const [topic, setTopic] = useState("");
   const { get, isLoading } = useFetch(
     "https://api.nytimes.com/svc/topstories/v2/"
   );
 
   useEffect(() => {
     get(`${topic}.json?api-key=M2MJ1tu97KN0b4aNn7xVudoO7owl2jgA`)
-      .then((data) => console.log(data))
+      .then((data) => {
+        console.log(data);
+        setTitle(data.results[0].title);
+        setAbstract(data.results[0].abstract);
+        setKeyword(data.results[0].section);
+        setLink(data.results[0].url);
+      })
       .catch((error) => console.log(error));
   }, [topic]);
 
@@ -32,9 +41,11 @@ export default function App() {
   return (
     <Wrapper>
       <NavBar onChange={handleTopicChange} />
-      {isLoading ? <p>""</p> : <Body />}
+      {/* {isLoading ? <p>""</p> : <Body />} */}
+      <Body title={title} abstract={abstract} keyword={keyword} link={link} />
     </Wrapper>
   );
 }
 
 //M2MJ1tu97KN0b4aNn7xVudoO7owl2jgA
+// keyword={keyword}
