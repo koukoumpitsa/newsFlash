@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const navBar_logo = styled.div`
+const LogoWrapper = styled.div`
   text-align: center;
   padding: 0.5em;
   display: flex;
@@ -15,8 +15,8 @@ const navBar_logo = styled.div`
 
 export default function NavBarLogo() {
   return (
-    <navBar_logo>
+    <LogoWrapper>
       <img src="./Hands - Random Stuff.png" alt="globe-logo" />
-    </navBar_logo>
+    </LogoWrapper>
   );
 }
