@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Navbar from "./Navbar";
+import NavBar from "./NavBar/NavBar";
 import "./styles.css";
 import useFetch from "./useFetch";
 
@@ -14,7 +14,7 @@ export default function App() {
       .catch((error) => console.log(error));
   }, []);
 
-  return <Navbar />;
+  return <NavBar />;
 }
 
 //M2MJ1tu97KN0b4aNn7xVudoO7owl2jgA
