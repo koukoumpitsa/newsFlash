@@ -2,6 +2,9 @@
 
 ### NewsFlash: Learn the latest news around the world in headlines.
 
+## DISCPLAIMER
+The purpose of this project is educational and should under no circustances be taken as a real life news outlet regardless if the json data we receive from the API are real news.
+
 #### Objectives of Project
 
 Within this project I wanted to bring together various aspects of React arhitecture. Such as statefull/stateless components, useFetch get calls, clearer component and state managment system alongside using styled-components.
