@@ -4,7 +4,6 @@ import Body from "./Body/Body";
 import NavBar from "./NavBar/NavBar";
 import "./styles.css";
 import useFetch from "./useFetch";
-console.log(process.env.REACT_APP_API_KEY);
 
 const Wrapper = styled.div`
   height: 100vh;
