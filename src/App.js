@@ -4,6 +4,7 @@ import Body from "./Body/Body";
 import NavBar from "./NavBar/NavBar";
 import "./styles.css";
 import useFetch from "./useFetch";
+console.log(process.env.REACT_APP_API_KEY);
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -23,7 +24,7 @@ export default function App() {
   );
 
   useEffect(() => {
-    get(`${topic}.json?api-key=M2MJ1tu97KN0b4aNn7xVudoO7owl2jgA`)
+    get(`${topic}.json?api-key=${process.env.REACT_APP_API_KEY}`)
       .then((data) => {
         console.log(data);
         setTitle(data.results[0].title);
@@ -46,6 +47,3 @@ export default function App() {
     </Wrapper>
   );
 }
-
-//M2MJ1tu97KN0b4aNn7xVudoO7owl2jgA
-// keyword={keyword}
