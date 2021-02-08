@@ -1,2 +1,5 @@
 # api key 
-*.env
+.env
+
+///test
+node_modules
