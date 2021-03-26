@@ -2,4 +2,4 @@
 
 ### NewsFlash: Learn the latest news around the world in headlines.
 
-##### Issue is with creating and updating dynamic data that are received from useFetch. Now there are way too many useStates being called inside the useEffect which will need to be passed onto the children compoenents and changed to a dynamic value. 
+Project is open as a reference to my own learning and advance in skillset. 
