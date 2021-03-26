@@ -1,4 +1,4 @@
-# NewsFlash v.01 :no_entry: - Project is CLOSED! 
+# NewsFlash v.01 :no_entry:
 
 ### NewsFlash: Learn the latest news around the world in headlines.
 
